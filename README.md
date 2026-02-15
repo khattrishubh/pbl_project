@@ -1,16 +1,32 @@
-# React + Vite
+# CertChain
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CertChain is a blockchain-based certificate verification system designed for intra-college use. It allows authorized campus clubs and departments to issue digital certificates, and users can verify their authenticity instantly using blockchain records.
 
-Currently, two official plugins are available:
+## Problem
+Traditional certificates are stored as PDFs or images and can be easily edited, forged, or lost. Verification requires manually contacting the issuing authority.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Solution
+CertChain stores a cryptographic proof of each certificate on the Ethereum blockchain. The system verifies authenticity by checking blockchain records instead of trusting uploaded files.
 
-## React Compiler
+## Features
+- Issue digital certificates
+- Verify certificate authenticity
+- Authorized issuers (clubs/departments)
+- Certificate revocation
+- Public blockchain transaction proof
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
+- React + Vite
+- Tailwind CSS
+- Solidity Smart Contract
+- Ethers.js
+- MetaMask
+- Ethereum Sepolia Testnet
 
-## Expanding the ESLint configuration
+## How Verification Works
+When a certificate is issued, a record is written to the blockchain. During verification, the system checks the blockchain transaction. If the record exists and is not revoked, the certificate is valid.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+**Author:** Shubh Khattri  
+**Registration Number:** 2427030494
